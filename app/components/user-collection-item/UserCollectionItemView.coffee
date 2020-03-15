@@ -1,4 +1,6 @@
 import {View} from "backbone"
+import UserService from "../../services/UserService"
+import {UserModel} from "../user/UserModel"
 
 export class UserCollectionItemView extends View
   tagName: 'tr'
@@ -8,6 +10,7 @@ export class UserCollectionItemView extends View
   events: {
     "click #edit" : "onEditClick"
     "click #save" : "onSaveClick"
+    "click #remove" : "onRemoveClick"
   }
 
   initialize: ->
@@ -19,9 +22,25 @@ export class UserCollectionItemView extends View
 
   onSaveClick: ->
     console.log "save"
-    @model.set "isEditMode", false
+    name = @$el.find('.user-name')[0].value
+    phone = @$el.find('.user-phone')[0].value
+    user = new UserModel {
+      name: name,
+      phone: phone
+    }
+    if !user.isValid()
+      @renderError user.validationError
+    else
+      UserService.update(@model, name, phone)
+      @model.set "isEditMode", false
+
+  onRemoveClick: ->
+    console.log "remove"
+    UserService.remove(@model)
 
   render: ->
     @el.innerHTML = @template(@model.attributes)
     @el
 
+  renderError: (message) ->
+    @$el.find("#error").text(message)

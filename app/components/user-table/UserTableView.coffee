@@ -1,6 +1,6 @@
 import {View} from "backbone"
 import "./user-table.less"
-import {UserCollectionView} from "../../views/UserCollectionView"
+import {UserCollectionView} from "../user-collection/UserCollectionView"
 
 export class UserTableView extends View
   template: require "./user-table-view.mustache"
@@ -11,4 +11,3 @@ export class UserTableView extends View
       collection: @model.get("userCollection")
     }
     userCollectionView.render()
-

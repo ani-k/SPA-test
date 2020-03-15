@@ -42,32 +42,26 @@
         
         &__cell {
             padding: 5px 0 5px 15px;
-            
-            .user-name {
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
             }
-            
-            .user-phone {
-            }
-            
-            &._user {
-            }
-            
-            &._phone {
-            }
-            
-            &._actions {
+
+            input {
+                font-size: 12px;
+                border: 1px solid lightgray;
+                height: 20px;
+                padding: 0 5px;
+                border-radius: 4px;
+                margin-left: -7px;
             }
         }
     }
     
     .error-message {
-        display: none;
-        
-        &._user-phone {
-        }
-        
-        &._user-name {
-        }
+        margin-left: 20px;
+        color: darkred;
     }
     
     .button {

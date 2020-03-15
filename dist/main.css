@@ -35,8 +35,21 @@
 .user-table-body__cell {
   padding: 5px 0 5px 15px;
 }
+.user-table-body__cell-wrapper {
+  display: flex;
+  align-items: center;
+}
+.user-table-body__cell input {
+  font-size: 12px;
+  border: 1px solid lightgray;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 4px;
+  margin-left: -7px;
+}
 .user-table .error-message {
-  display: none;
+  margin-left: 20px;
+  color: darkred;
 }
 .user-table .button {
   background-repeat: no-repeat;
@@ -54,49 +67,69 @@
   outline: none;
 }
 .user-table .button._edit {
-  background-image: url(94d2870d92b8d66c6aedb9aa03317233.svg);
+  background-image: url(feb43f96e4436074e1625bab642ef995.svg);
 }
 .user-table .button._save {
-  background-image: url(eeb52c825286a58e4f2509d576a86f63.svg);
+  background-image: url(ecf015ac9b5906b4bf7fdefa282104a3.svg);
 }
 .user-table .button._remove {
   margin-left: 10px;
-  background-image: url(9b16c79cb2b25f66ff68b666a8b0b4c8.svg);
+  background-image: url(a5cf063a7aec27d75fd189927baea1cf.svg);
 }
 .app {
+  font-family: monospace;
   width: 1200px;
   margin: auto;
   padding: 40px 20px;
+  color: #262626;
 }
-.app .new-user {
+.app .table-wrapper {
+  margin-bottom: 40px;
+}
+.app .table-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.new-user {
   display: flex;
   align-items: flex-end;
+  padding-bottom: 10px;
+}
+.new-user__wrapper {
   width: 600px;
-  margin-top: 40px;
-  padding: 20px;
+  padding: 20px 20px 10px;
   border: 1px solid lightgray;
   border-radius: 4px;
 }
-.app .new-user__row-title {
+.new-user__wrapper .error-message {
+  color: darkred;
+}
+.new-user__title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.new-user__row-title {
   text-transform: uppercase;
   margin-bottom: 8px;
 }
-.app .new-user__row input {
+.new-user__row input {
   height: 28px;
   border-radius: 4px;
   border: 1px solid lightgray;
   width: 100%;
+  padding: 0 5px;
 }
-.app .new-user__row + .new-user__row {
+.new-user__row + .new-user__row {
   margin-left: 20px;
 }
-.app .new-user .button {
-  height: 32px;
+.new-user .button {
+  height: 30px;
   background-color: #f6f7f6;
   border-radius: 4px;
   padding: 0 18px;
   margin-left: 20px;
+  border: 1px solid lightgray;
 }
-.app .error-message {
-  display: none;
+.new-user .button:hover {
+  cursor: pointer;
 }

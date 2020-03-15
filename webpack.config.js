@@ -4,6 +4,9 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: './index.coffee',
     watch: true,
+    watchOptions: {
+        ignored: /node_modules/
+    },
     output: {
         path: path.resolve("./dist"),
         //publicPath: "dist/",
