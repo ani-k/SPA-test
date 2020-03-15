@@ -1,0 +1,28 @@
+{{#isEditMode}}
+    <td class="user-table-body__cell _user">
+        <input type="text" class="user-name" value="{{name}}"/>
+        <div class="error-message _user-name">User Name is not valid.</div>
+    </td>
+    <td class="user-table-body__cell _phone">
+        <input type="text" class="user-phone" value="{{phone}}"/>
+        <div class="error-message _user-phone">Phone number is not valid.</div>
+    </td>
+    <td class="user-table-body__cell _actions">
+        <button id="save" class="button _save"></button>
+        <button id="cancel" class="button _remove"></button>
+    </td>
+{{/isEditMode}}
+{{^isEditMode}}
+    <td class="user-table-body__cell _user">
+        <div class="user-name">{{name}}</div>
+        <div class="error-message _user-name">User Name is not valid.</div>
+    </td>
+    <td class="user-table-body__cell _phone">
+        <div class="user-phone">{{phone}}</div>
+        <div class="error-message _user-phone">Phone number is not valid.</div>
+    </td>
+    <td class="user-table-body__cell _actions">
+        <button id="edit" class="button _edit"></button>
+        <button id="cancel" class="button _remove"></button>
+    </td>
+{{/isEditMode}}
