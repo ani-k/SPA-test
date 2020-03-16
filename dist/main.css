@@ -1,3 +1,17 @@
+.app {
+  font-family: monospace;
+  width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: #262626;
+}
+.app .table-wrapper {
+  margin-bottom: 40px;
+}
+.app .table-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
 .user-table {
   width: 100%;
   text-align: left;
@@ -75,20 +89,6 @@
 .user-table .button._remove {
   margin-left: 10px;
   background-image: url(a5cf063a7aec27d75fd189927baea1cf.svg);
-}
-.app {
-  font-family: monospace;
-  width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-  color: #262626;
-}
-.app .table-wrapper {
-  margin-bottom: 40px;
-}
-.app .table-title {
-  font-size: 16px;
-  margin-bottom: 15px;
 }
 .new-user {
   display: flex;
